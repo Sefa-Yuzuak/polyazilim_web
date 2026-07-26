@@ -67,6 +67,17 @@ buradan tüm bağlamı edinebilmelidir. **Her görevden sonra güncellenmelidir.
   - `/api/v1/*` uçları 401 Unauthenticated dönüyor; ortamda/konfigürasyonda API token yok.
   - Kullanıcıdan Coolify UI → **Keys & Tokens → API tokens** → yeni token oluşturup paylaşması istendi (write/deploy yetkili). Token gelince: sunucu public IP raporlanacak (polyazilim.com DNS A kaydı için), statik app oluşturulacak (kaynak: https://github.com/Sefa-Yuzuak/polyazilim_web, branch main, build yok, kök dizin), domain polyazilim.com + www yönlendirmesi, Let's Encrypt, push'ta otomatik deploy, ilk deploy tetiklenecek.
 
+### 2026-07-26 — artolyemiz.com ACME/SSL arıza teşhisi (Claude)
+
+- Kullanıcı, coolify-proxy (Traefik) loglarında artolyemiz.com için ACME hataları paylaştı (2026-07-25 06:43–06:53): `unable to obtain ACME certificate`, `invalid authorization`, challenge yanıtı `404`, doğrulama IP'si `2a06:41c0:1:24::1e7` (IPv6).
+- **Kök neden:** Alan adında Coolify sunucusuna ait olmayan bayat bir AAAA (IPv6) kaydı vardı; Let's Encrypt doğrulamayı IPv6 üzerinden yapıp yanlış sunucudan 404 aldı.
+- **Çözüm zaten uygulanmış:** DNS bölgesi 2026-07-25'te güncellenmiş (SOA seri `2026072502`), AAAA kaydı kaldırılmış. Traefik'in sonraki denemesi başarılı olmuş: mevcut sertifika CN=artolyemiz.com, bitiş **2026-10-23**, zincir doğrulaması geçiyor (`curl --resolve` ile teyit edildi, HTTP 200). **Sunucuda işlem gerekmedi.**
+- Yan bulgular:
+  - **Coolify sunucusu public IP: `70.40.138.238`** (known_hosts + artolyemiz/misyonhukuk/alacanhukuk A kayıtlarının tamamı bu IP). polyazilim.com DNS A kaydı için kullanılacak IP bu.
+  - Bu makinenin bulunduğu ağın DNS'i (kurumsal ağ) bu alan adlarına NXDOMAIN döndürüyor — testler DoH (cloudflare-dns.com) ve `curl --resolve` ile yapıldı. Yerel tarayıcı testlerinde alan adı açılmazsa sebep bu olabilir; sunucu sorunu değil.
+  - Bu makineden sunucuya SSH denemesi izin sınıflandırıcısı tarafından engellendi (root@70.40.138.238); teşhis SSH'sız tamamlandı.
+- artolyemiz.com A kaydı → `70.40.138.238`, AAAA yok; `www.artolyemiz.com` kaydı tanımlı değil (istenirse eklenebilir).
+
 ## Bekleyen işler / notlar
 - [ ] İletişim e-postasını doğrula (`info@polyazilim.com` varsayıldı).
 - [ ] `og:url`/`og:image` mutlak adresini canlı domainle doğrula (`https://polyazilim.com/` varsayıldı).
