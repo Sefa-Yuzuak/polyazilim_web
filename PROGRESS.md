@@ -78,6 +78,14 @@ buradan tüm bağlamı edinebilmelidir. **Her görevden sonra güncellenmelidir.
   - Bu makineden sunucuya SSH denemesi izin sınıflandırıcısı tarafından engellendi (root@70.40.138.238); teşhis SSH'sız tamamlandı.
 - artolyemiz.com A kaydı → `70.40.138.238`, AAAA yok; `www.artolyemiz.com` kaydı tanımlı değil (istenirse eklenebilir).
 
+### 2026-07-26 — polyazilim.com DNS doğrulandı; deploy hâlâ token bekliyor (Claude)
+
+- Kullanıcı DNS'i ayarladı. DoH ile doğrulandı (yerel DNS filtreli olduğundan cloudflare-dns.com üzerinden):
+  - `polyazilim.com` A → `70.40.138.238` ✓, AAAA yok ✓ (SOA seri `2026072602`)
+  - `www.polyazilim.com` CNAME → `polyazilim.com` → aynı IP ✓, AAAA yok ✓
+- Coolify API hâlâ 401 (token yok); ortamda/masaüstünde token dosyası bulunamadı. SSH bu makineden izin sistemince engelli. **Statik uygulama oluşturma, domain/SSL, otomatik deploy ve ilk deploy adımları API token gelene kadar bloke.**
+- Masaüstündeki `sunucu taşıma hafıza dosyası.md` incelendi (token yok). **Bulgu:** Monitoring bildirimleri `polyazilim@gmail.com` adresine gidiyor — sitedeki iletişim mailto'su `info@polyazilim.com` varsayımıydı; kullanıcıya soruldu.
+
 ## Bekleyen işler / notlar
 - [ ] İletişim e-postasını doğrula (`info@polyazilim.com` varsayıldı).
 - [ ] `og:url`/`og:image` mutlak adresini canlı domainle doğrula (`https://polyazilim.com/` varsayıldı).
