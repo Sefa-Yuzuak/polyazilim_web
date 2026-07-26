@@ -27,8 +27,10 @@ html {
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+    animation-delay: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0.01ms !important;
   }
 }
 
@@ -299,6 +301,12 @@ a:focus-visible {
   border-color: var(--accent);
 }
 
+.card-media {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
 .card-img {
   display: block;
   width: 100%;
@@ -306,7 +314,65 @@ a:focus-visible {
   aspect-ratio: 8 / 5;
   object-fit: cover;
   background: #1a1a1a;
-  border-bottom: 1px solid var(--border);
+}
+
+/* hover overlay: "$ cat proje.txt" typed, then summary */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.3rem;
+  padding: 1rem 1.25rem;
+  background: rgba(10, 10, 10, 0.88);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.card:hover .card-overlay,
+.card:focus-within .card-overlay {
+  opacity: 1;
+}
+
+.overlay-cmd {
+  color: var(--text);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 15ch; /* "$ cat proje.txt" */
+}
+
+.card:hover .overlay-cmd,
+.card:focus-within .overlay-cmd {
+  animation: type-cmd 0.8s steps(15, end) both;
+}
+
+.overlay-out {
+  color: var(--accent);
+  font-size: 0.8rem;
+  opacity: 0;
+}
+
+.card:hover .overlay-out,
+.card:focus-within .overlay-out {
+  animation: overlay-out-in 0.15s ease 0.85s both;
+}
+
+@keyframes type-cmd {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15ch;
+  }
+}
+
+@keyframes overlay-out-in {
+  to {
+    opacity: 1;
+  }
 }
 
 .card-body {

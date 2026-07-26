@@ -36,8 +36,20 @@ buradan tüm bağlamı edinebilmelidir. **Her görevden sonra güncellenmelidir.
 - `index.html` güncellendi: scy, actorstudio ve alacanhukuk kartları `.webp` dosyalarını gösterecek şekilde düzeltildi. **Karar:** `alacan.webp`, alacanhukuk.com kartının görseli olarak yorumlandı; artık kullanılmayan `alacanhukuk.png` placeholder'ı silindi.
 - `telegram-bot.png` hâlâ gri placeholder.
 
+### 2026-07-26 — Görsel/SEO/hover iyileştirmeleri (Claude)
+
+- `telegram-bot.png` yeniden üretildi (PowerShell + System.Drawing, 800×500, ~10KB): terminal estetiğinde sohbet günlüğü — `> telegram-bot --start`, `[✓] bot online`, `[✓] webhook bağlandı`, `[✓] komut: /durum`, `[✓] mesaj işlendi` vb. Artık placeholder değil, kasıtlı bir görsel.
+- Görsel optimizasyonu:
+  - `aibell.png` (569KB, 1280×610) → `aibell.jpg` (45KB, JPEG q82) dönüştürüldü.
+  - **Tespit:** `artolyemiz.png` ve `misyonhukuk.png` aslında yanlış uzantılı WebP dosyalarıydı (RIFF/WEBP imzalı; GDI+ bu yüzden "OutOfMemory" hatası veriyordu). Zaten sıkıştırılmış oldukları için `.webp` uzantısına yeniden adlandırıldılar.
+  - Tüm proje görselleri artık ≤84KB. `loading="lazy"` hepsinde mevcuttu; alt metinleri daha açıklayıcı Türkçe ifadelerle güncellendi.
+  - **Not:** Makinede magick/cwebp/ffmpeg/pngquant yok; sıkıştırma .NET System.Drawing ile yapıldı.
+- Kart hover overlay: görsel üzerine `.card-media` sarmalayıcı + `.card-overlay` eklendi. Hover/focus-within'de koyu overlay açılıyor, `$ cat proje.txt` steps() animasyonuyla yazılıyor (0.8s), ardından accent yeşili 1 satırlık özet beliriyor. `aria-hidden="true"` (kart gövdesindeki açıklamanın kopyası). Reduced-motion: global kuralın kapsamadığı `animation-delay`/`transition-delay` da 0.01ms'e indirildi — her şey anında görünür.
+- Favicon: inline SVG data URI (`>` sembolü, #00ff9c / #0a0a0a).
+- SEO: title `PolyAzılım — Web, Otomasyon, Yönetim Panelleri`; Türkçe meta description genişletildi; `og:type/url/locale/title/description/image` eklendi. **Karar:** `og:image` ve `og:url` için `https://polyazilim.com/` mutlak adresi varsayıldı — canlı domain farklıysa güncellenmeli. `lang="tr"` zaten mevcuttu.
+
 ## Bekleyen işler / notlar
 
-- [ ] `telegram-bot.png` için gerçek görsel at (`assets/screenshots/telegram-bot.png`, 8:5 oran önerilir).
 - [ ] İletişim e-postasını doğrula (`info@polyazilim.com` varsayıldı).
+- [ ] `og:url`/`og:image` mutlak adresini canlı domainle doğrula (`https://polyazilim.com/` varsayıldı).
 - [ ] Coolify'da statik site olarak deploy et (build komutu yok; kök dizin servis edilecek).
