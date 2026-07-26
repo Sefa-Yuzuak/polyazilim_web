@@ -86,7 +86,27 @@ buradan tüm bağlamı edinebilmelidir. **Her görevden sonra güncellenmelidir.
 - Coolify API hâlâ 401 (token yok); ortamda/masaüstünde token dosyası bulunamadı. SSH bu makineden izin sistemince engelli. **Statik uygulama oluşturma, domain/SSL, otomatik deploy ve ilk deploy adımları API token gelene kadar bloke.**
 - Masaüstündeki `sunucu taşıma hafıza dosyası.md` incelendi (token yok). **Bulgu:** Monitoring bildirimleri `polyazilim@gmail.com` adresine gidiyor — sitedeki iletişim mailto'su `info@polyazilim.com` varsayımıydı; kullanıcıya soruldu.
 
+### 2026-07-26 — CANLI: Coolify deploy tamamlandı (Claude)
+
+- Kullanıcı API token verdi (güvenlik gereği bu dosyaya YAZILMADI; Coolify UI → Keys & Tokens'tan yönetiliyor).
+- İletişim e-postası kullanıcı kararıyla `polyazilim@gmail.com` yapıldı (commit `4571063`).
+- Coolify üzerinden oluşturulan uygulama:
+  - Sunucu: **cloud 3** (`xi5tjz3mtd8qxrlt4x7nfq1j`, IP `70.40.138.238`), proje: "My first project" / production.
+  - Uygulama: **polyazilim-web** (`e64kcc076ujw88698xgy2p32`), build pack **static** (nginx:alpine), kaynak `Sefa-Yuzuak/polyazilim_web` branch `main`, base directory `/`, build komutu yok.
+  - Domainler: `https://polyazilim.com` + `https://www.polyazilim.com`, Let's Encrypt otomatik.
+- İlk deploy: `t537l1fmps2ympnzhdxp7oh6` → **finished** (~20 sn).
+- Dış doğrulama (`curl --resolve` ile, yerel DNS filtreli):
+  - `https://polyazilim.com` → 200, sertifika zinciri geçerli (ssl_verify=0) ✓
+  - `https://www.polyazilim.com` → 200, sertifika geçerli ✓
+  - HTTP → HTTPS 302 yönlendirmesi her ikisinde ✓
+  - İçerik doğru: yeni title, logo, `mailto:polyazilim@gmail.com` ✓
+- **Otomatik deploy KURULAMADI:** Coolify paneli dışarıdan erişilebilir değil — `70.40.138.238:8000` kapalı (timeout), panel için public FQDN yok (coolify/panel/deploy/cloud.polyazilim.com tanımsız). GitHub webhook'unun ulaşacağı adres olmadığından webhook kurmak anlamsız olurdu. Seçenekler:
+  1. (Önerilen) `coolify.polyazilim.com` A kaydı → 70.40.138.238 açılıp Coolify Settings → Instance Domain ayarlanırsa panel Traefik+LE arkasına girer; sonra GitHub webhook'u `gh` ile kurulabilir.
+  2. Alternatif: her push sonrası manuel tetikleme: `POST /api/v1/deploy?uuid=e64kcc076ujw88698xgy2p32` (Bearer token ile, tünel üzerinden 127.0.0.1:8000).
+- **Şimdilik kural: push sonrası deploy'u API ile manuel tetikle** (bu oturumda da böyle yapıldı).
+
 ## Bekleyen işler / notlar
-- [ ] İletişim e-postasını doğrula (`info@polyazilim.com` varsayıldı).
-- [ ] `og:url`/`og:image` mutlak adresini canlı domainle doğrula (`https://polyazilim.com/` varsayıldı).
-- [ ] Coolify'da statik site olarak deploy et (build komutu yok; kök dizin servis edilecek).
+- [ ] Otomatik deploy: `coolify.polyazilim.com` DNS + Instance Domain ayarı sonrası GitHub webhook kur (yukarıdaki not).
+- [x] İletişim e-postası: `polyazilim@gmail.com` olarak güncellendi.
+- [x] `og:url`/`og:image`: canlı domain `https://polyazilim.com/` ile uyumlu.
+- [x] Coolify'da statik site deploy edildi; **site CANLI**.
