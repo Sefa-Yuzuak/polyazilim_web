@@ -48,8 +48,11 @@ buradan tüm bağlamı edinebilmelidir. **Her görevden sonra güncellenmelidir.
 - Favicon: inline SVG data URI (`>` sembolü, #00ff9c / #0a0a0a).
 - SEO: title `PolyAzılım — Web, Otomasyon, Yönetim Panelleri`; Türkçe meta description genişletildi; `og:type/url/locale/title/description/image` eklendi. **Karar:** `og:image` ve `og:url` için `https://polyazilim.com/` mutlak adresi varsayıldı — canlı domain farklıysa güncellenmeli. `lang="tr"` zaten mevcuttu.
 
+- Commit sırasında tespit: kullanıcı `assets/screenshots/logo.webp` eklemiş (PolyAzılım logosu olduğu tahmin ediliyor); commit'e dahil oldu ama sitede henüz kullanılmıyor — bekleyen işlere eklendi.
+
 ## Bekleyen işler / notlar
 
+- [ ] `logo.webp` sitede kullanılacak mı? (header'daki metin logo yerine/yanına — kullanıcıya sorulacak; dosya `assets/screenshots/` yerine `assets/` altına taşınmalı).
 - [ ] İletişim e-postasını doğrula (`info@polyazilim.com` varsayıldı).
 - [ ] `og:url`/`og:image` mutlak adresini canlı domainle doğrula (`https://polyazilim.com/` varsayıldı).
 - [ ] Coolify'da statik site olarak deploy et (build komutu yok; kök dizin servis edilecek).
