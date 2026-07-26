@@ -58,6 +58,15 @@ buradan tüm bağlamı edinebilmelidir. **Her görevden sonra güncellenmelidir.
 - **Karar:** Logo siyah "POL YAZILIM" yazısı açık zemin üzerinde — koyu sitede görünmez olurdu. CSS ile `filter: invert(1)` + `mix-blend-mode: screen` uygulandı: yazı beyaza döner, zemin karışımla kaybolur (opak/şeffaf her iki durumda da çalışır).
 - **Not:** Logodaki marka "POL YAZILIM" olarak yazıyor, site metinlerinde ise "PolyAzılım" kullanılıyor — tutarlılık kullanıcıyla netleştirilebilir.
 
+### 2026-07-26 — apple-touch-icon + Coolify deploy hazırlığı (Claude)
+
+- **Not (PART A):** Kullanıcının yeni istemi logoyu "metin yanına" koymayı tarif ediyordu; ancak bir önceki oturumda kullanıcı soruya "yalnızca logo" cevabı vermişti ve bu uygulanmış durumda (`assets/logo.webp`, invert + mix-blend-mode fix). Çelişki kullanıcıya raporlandı; mevcut "yalnızca logo" hali korundu.
+- `apple-touch-icon` eklendi: `assets/apple-touch-icon.png` (180×180, favicon ile aynı tasarım: #0a0a0a zeminde #00ff9c ">"). **Karar:** Apple touch icon WebP/SVG desteklemez ve GDI+ webp okuyamadığından logo rasterize edilemedi; favicon ile tutarlı ">" simgesi üretildi.
+- **Coolify (PART B) — TOKEN BEKLİYOR:**
+  - Coolify `http://127.0.0.1:8000` üzerinde çalışıyor; `/api/health` = OK.
+  - `/api/v1/*` uçları 401 Unauthenticated dönüyor; ortamda/konfigürasyonda API token yok.
+  - Kullanıcıdan Coolify UI → **Keys & Tokens → API tokens** → yeni token oluşturup paylaşması istendi (write/deploy yetkili). Token gelince: sunucu public IP raporlanacak (polyazilim.com DNS A kaydı için), statik app oluşturulacak (kaynak: https://github.com/Sefa-Yuzuak/polyazilim_web, branch main, build yok, kök dizin), domain polyazilim.com + www yönlendirmesi, Let's Encrypt, push'ta otomatik deploy, ilk deploy tetiklenecek.
+
 ## Bekleyen işler / notlar
 - [ ] İletişim e-postasını doğrula (`info@polyazilim.com` varsayıldı).
 - [ ] `og:url`/`og:image` mutlak adresini canlı domainle doğrula (`https://polyazilim.com/` varsayıldı).
