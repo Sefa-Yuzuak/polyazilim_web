@@ -23,7 +23,12 @@ buradan tüm bağlamı edinebilmelidir. **Her görevden sonra güncellenmelidir.
 - `style.css` yazıldı: CSS değişkenleri (`--bg`, `--accent` vb.), mobile-first grid (640px'de 2 sütun, 960px'de 3 sütun), keskin kenarlar (border-radius yok), `prefers-reduced-motion` için global animasyon kapatma. **Karar:** Soluk gri metin `#a8a8a8` seçildi (WCAG AA, #0a0a0a üzerinde ~8.7:1 kontrast).
 - `script.js` yazıldı: hero yazma efekti + canvas matrix yağmuru (~12.5fps, `rgba(0,255,156,0.10)` çok düşük opaklık). `prefers-reduced-motion` aktifse: komut anında yazılı gösterilir, canvas DOM'dan kaldırılır.
 - Ekran görüntüsü placeholder'ları: PowerShell + System.Drawing ile 800×500 gri PNG'ler üretildi (`assets/screenshots/`). **Karar:** Gerçek görüntüler gelene kadar site bozuk görsel ikonu göstermesin diye boş kutu yerine gerçek PNG dosyaları üretildi; aynı isimle üzerine yazılarak değiştirilecekler.
-- Git: `git init`, ilk commit, GitHub'da `polyazilim_web` reposu oluşturulup push edildi (detay aşağıdaki güncellemede).
+- Git: `git init`, ilk commit (`ed89a38`), branch `main` olarak adlandırıldı.
+  - **Karar:** Makinede global git kimliği yoktu; repo-local kimlik olarak GitHub hesabı `Sefa-Yuzuak` + noreply e-postası ayarlandı.
+- GitHub: `gh repo create polyazilim_web --public --source . --push` ile repo oluşturuldu ve push edildi.
+  - Repo: https://github.com/Sefa-Yuzuak/polyazilim_web
+  - **Karar:** Görünürlük belirtilmemişti; herkese açık portfolyo içeriği olduğu için `--public` seçildi (gerekirse `gh repo edit --visibility private` ile değiştirilebilir).
+- PROGRESS.md güncellendi ve push edildi.
 
 ## Bekleyen işler / notlar
 
