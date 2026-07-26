@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PolyAzılım — web • otomasyon • yönetim panelleri</title>
+  <meta name="description" content="PolyAzılım: web siteleri, otomasyon sistemleri, yönetim panelleri, e-ticaret entegrasyonları ve Telegram botları geliştiren yazılım şirketi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="#top">poly<span class="accent">azilim</span><span class="cursor-block" aria-hidden="true">_</span></a>
+      <ul class="nav-links">
+        <li><a href="#hizmetler">./hizmetler</a></li>
+        <li><a href="#projeler">./projeler</a></li>
+        <li><a href="#iletisim">./iletisim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero container">
+      <div class="terminal" role="img" aria-label="Terminal: polyazilim --init — web, otomasyon, yönetim panelleri">
+        <div class="terminal-bar">
+          <span class="t-dot" aria-hidden="true"></span>
+          <span class="t-dot" aria-hidden="true"></span>
+          <span class="t-dot" aria-hidden="true"></span>
+          <span class="t-title">polyazilim@sh: ~</span>
+        </div>
+        <div class="terminal-body">
+          <p class="t-line"><span class="prompt">&gt;</span> <span id="typed"></span><span id="type-cursor" class="cursor-block">█</span></p>
+          <p class="t-line t-output" id="t-output" hidden>
+            <span class="accent">[OK]</span> sistem hazır<br>
+            <span class="tagline">web • otomasyon • yönetim panelleri</span>
+          </p>
+        </div>
+      </div>
+      <p class="hero-sub">İşinizi otomatikleştiren, ölçeklenebilir ve sade yazılımlar üretiyoruz.</p>
+      <a class="btn" href="#projeler">projeleri incele --all</a>
+    </section>
+
+    <!-- ============ HİZMETLER ============ -->
+    <section id="hizmetler" class="section container">
+      <h2 class="section-title"><span class="prompt">&gt;</span> ls ./hizmetler</h2>
+      <ul class="services">
+        <li class="service">
+          <h3>web siteleri</h3>
+          <p>Kurumsal web siteleri ve modern, hızlı, SEO uyumlu tanıtım sayfaları.</p>
+        </li>
+        <li class="service">
+          <h3>otomasyon sistemleri</h3>
+          <p>Tekrarlayan iş süreçlerini uçtan uca otomatikleştiren özel sistemler.</p>
+        </li>
+        <li class="service">
+          <h3>yönetim panelleri</h3>
+          <p>İşletmenize özel; satış, üyelik, aidat ve operasyon yönetim panelleri.</p>
+        </li>
+        <li class="service">
+          <h3>e-ticaret entegrasyonları</h3>
+          <p>Trendyol / Koçtaş stok takip ve pazaryeri entegrasyon çözümleri.</p>
+        </li>
+        <li class="service">
+          <h3>sosyal medya otomasyonu</h3>
+          <p>İçerik planlama ve paylaşım süreçlerinde tam otomasyon.</p>
+        </li>
+        <li class="service">
+          <h3>telegram botları</h3>
+          <p>Bildirim, sipariş ve iş akışı yöneten özel Telegram botları.</p>
+        </li>
+        <li class="service">
+          <h3>3d sanal showroom</h3>
+          <p>Ürünlerinizi tarayıcıda gezilebilir 3D showroom olarak sergileyin.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ PROJELER ============ -->
+    <section id="projeler" class="section container">
+      <h2 class="section-title"><span class="prompt">&gt;</span> ls ./projeler</h2>
+      <div class="projects">
+
+        <article class="card">
+          <img class="card-img" src="assets/screenshots/scy.png" alt="SCY Mobilya ekran görüntüsü" loading="lazy" width="800" height="500">
+          <div class="card-body">
+            <h3><a href="https://scy.polyazilim.com" target="_blank" rel="noopener">scy.polyazilim.com</a></h3>
+            <p>SCY Mobilya: 3D sanal showroom + Trendyol/Koçtaş/web sitesi stok takip otomasyonu + sosyal medya otomasyonu.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card-img" src="assets/screenshots/actorstudio.png" alt="Actor Studio yönetim paneli ekran görüntüsü" loading="lazy" width="800" height="500">
+          <div class="card-body">
+            <h3><a href="https://actorstudio.polyazilim.com" target="_blank" rel="noopener">actorstudio.polyazilim.com</a></h3>
+            <p>Tiyatro &amp; kurs yönetim paneli: Biletix/Biletinial/Bubilet/FırsatBuFırsat bilet otomasyonu, bilet satış/değişiklik, kurs aidat yönetimi.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card-img" src="assets/screenshots/aibell.png" alt="AIBell ekran görüntüsü" loading="lazy" width="800" height="500">
+          <div class="card-body">
+            <h3><a href="https://aibell.polyazilim.com" target="_blank" rel="noopener">aibell.polyazilim.com</a></h3>
+            <p>AI ürünü.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card-img" src="assets/screenshots/artolyemiz.png" alt="Artölyemiz ekran görüntüsü" loading="lazy" width="800" height="500">
+          <div class="card-body">
+            <h3><a href="https://artolyemiz.com" target="_blank" rel="noopener">artolyemiz.com</a></h3>
+            <p>PolyAzılım bünyesinde sanat atölyesi platformu.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card-img" src="assets/screenshots/misyonhukuk.png" alt="Misyon Hukuk ekran görüntüsü" loading="lazy" width="800" height="500">
+          <div class="card-body">
+            <h3><a href="https://misyonhukuk.com.tr" target="_blank" rel="noopener">misyonhukuk.com.tr</a></h3>
+            <p>Hukuk bürosu web sitesi.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card-img" src="assets/screenshots/alacanhukuk.png" alt="Alacan Hukuk ekran görüntüsü" loading="lazy" width="800" height="500">
+          <div class="card-body">
+            <h3><a href="https://alacanhukuk.com" target="_blank" rel="noopener">alacanhukuk.com</a></h3>
+            <p>Hukuk bürosu web sitesi.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card-img" src="assets/screenshots/telegram-bot.png" alt="Telegram bot ekran görüntüsü" loading="lazy" width="800" height="500">
+          <div class="card-body">
+            <h3>Telegram Bot</h3>
+            <p>Özel otomasyon botu.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ İLETİŞİM ============ -->
+    <section id="iletisim" class="section container">
+      <h2 class="section-title"><span class="prompt">&gt;</span> ./iletisim --send</h2>
+      <p class="contact-text">Projeniz için konuşalım. Tek komut yeter:</p>
+      <a class="btn btn-lg" href="mailto:info@polyazilim.com">mail -s "proje" info@polyazilim.com</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><span class="prompt">&gt;</span> © <span id="year">2026</span> PolyAzılım — exit 0</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
