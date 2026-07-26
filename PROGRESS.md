@@ -30,8 +30,14 @@ buradan tüm bağlamı edinebilmelidir. **Her görevden sonra güncellenmelidir.
   - **Karar:** Görünürlük belirtilmemişti; herkese açık portfolyo içeriği olduğu için `--public` seçildi (gerekirse `gh repo edit --visibility private` ile değiştirilebilir).
 - PROGRESS.md güncellendi ve push edildi.
 
+### 2026-07-26 — Gerçek ekran görüntüleri bağlandı (Claude)
+
+- Kullanıcı `assets/screenshots/` içine gerçek görselleri attı: `aibell.png`, `artolyemiz.png`, `misyonhukuk.png` (placeholder'ların üzerine) + yeni dosyalar `scy.webp`, `actorstudio.webp`, `alacan.webp` (eski `scy.png` ve `actorstudio.png` placeholder'ları silindi).
+- `index.html` güncellendi: scy, actorstudio ve alacanhukuk kartları `.webp` dosyalarını gösterecek şekilde düzeltildi. **Karar:** `alacan.webp`, alacanhukuk.com kartının görseli olarak yorumlandı; artık kullanılmayan `alacanhukuk.png` placeholder'ı silindi.
+- `telegram-bot.png` hâlâ gri placeholder.
+
 ## Bekleyen işler / notlar
 
-- [ ] Gerçek ekran görüntülerini `assets/screenshots/` içine at (dosya adları: `scy.png`, `actorstudio.png`, `aibell.png`, `artolyemiz.png`, `misyonhukuk.png`, `alacanhukuk.png`, `telegram-bot.png` — 800×500 veya 8:5 oran önerilir).
+- [ ] `telegram-bot.png` için gerçek görsel at (`assets/screenshots/telegram-bot.png`, 8:5 oran önerilir).
 - [ ] İletişim e-postasını doğrula (`info@polyazilim.com` varsayıldı).
 - [ ] Coolify'da statik site olarak deploy et (build komutu yok; kök dizin servis edilecek).
