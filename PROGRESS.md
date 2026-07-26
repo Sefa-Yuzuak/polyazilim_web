@@ -50,9 +50,15 @@ buradan tüm bağlamı edinebilmelidir. **Her görevden sonra güncellenmelidir.
 
 - Commit sırasında tespit: kullanıcı `assets/screenshots/logo.webp` eklemiş (PolyAzılım logosu olduğu tahmin ediliyor); commit'e dahil oldu ama sitede henüz kullanılmıyor — bekleyen işlere eklendi.
 
-## Bekleyen işler / notlar
+### 2026-07-26 — Logo header'a eklendi (Claude)
 
-- [ ] `logo.webp` sitede kullanılacak mı? (header'daki metin logo yerine/yanına — kullanıcıya sorulacak; dosya `assets/screenshots/` yerine `assets/` altına taşınmalı).
+- Kullanıcı kararı: header'da yalnızca logo kullanılacak (metin logo kaldırıldı).
+- `logo.webp`, `assets/screenshots/` → `assets/logo.webp` konumuna taşındı (git mv).
+- Header'daki `poly**azilim**_` metin logosu `<img class="logo-img" src="assets/logo.webp" alt="PolyAzılım" height="36">` ile değiştirildi.
+- **Karar:** Logo siyah "POL YAZILIM" yazısı açık zemin üzerinde — koyu sitede görünmez olurdu. CSS ile `filter: invert(1)` + `mix-blend-mode: screen` uygulandı: yazı beyaza döner, zemin karışımla kaybolur (opak/şeffaf her iki durumda da çalışır).
+- **Not:** Logodaki marka "POL YAZILIM" olarak yazıyor, site metinlerinde ise "PolyAzılım" kullanılıyor — tutarlılık kullanıcıyla netleştirilebilir.
+
+## Bekleyen işler / notlar
 - [ ] İletişim e-postasını doğrula (`info@polyazilim.com` varsayıldı).
 - [ ] `og:url`/`og:image` mutlak adresini canlı domainle doğrula (`https://polyazilim.com/` varsayıldı).
 - [ ] Coolify'da statik site olarak deploy et (build komutu yok; kök dizin servis edilecek).

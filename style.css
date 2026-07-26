@@ -105,15 +105,21 @@ a:focus-visible {
 }
 
 .logo {
-  color: var(--text);
-  font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: 0.02em;
+  display: block;
 }
 
 .logo:hover,
 .logo:focus-visible {
   text-decoration: none;
+}
+
+.logo-img {
+  display: block;
+  height: 36px;
+  width: auto;
+  /* siyah logoyu koyu zeminde beyaza çevir; zemini karışımla yok et */
+  filter: invert(1);
+  mix-blend-mode: screen;
 }
 
 .nav-links {
