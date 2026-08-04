@@ -8,6 +8,17 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "generate_lead", {
+          method: "email_click",
+          transport_type: "beacon",
+        });
+      }
+    });
+  });
+
   /* ---------- hero typing effect ---------- */
   var typedEl = document.getElementById("typed");
   var outputEl = document.getElementById("t-output");
