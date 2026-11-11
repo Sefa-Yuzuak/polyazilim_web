@@ -6,9 +6,9 @@ buradan tüm bağlamı edinebilmelidir. **Her görevden sonra güncellenmelidir.
 ## Proje özeti
 
 - **Ne:** PolyAzılım (Türk yazılım şirketi) portfolyo sitesi.
-- **Stack:** Saf statik — tek `index.html` + `style.css` + `script.js`. Framework yok, build adımı yok. Coolify'da statik site olarak deploy edilecek.
-- **Tasarım kuralları (katı):** Terminal/hacker estetiği; bg `#0a0a0a`, metin beyaz/gri, tek accent `#00ff9c`; her yerde JetBrains Mono (Google Fonts); arka planda çok düşük opaklıkta animasyonlu matrix karakter yağmuru (`prefers-reduced-motion`'a saygılı); keskin kenarlar, gradient yok, bol boşluk, WCAG AA kontrast, mobile-first.
-- **Bölümler (Türkçe içerik):** Hero (sahte terminal + yazma efekti), Hizmetler, Projeler (kart grid), İletişim (mailto).
+- **Stack:** Derleme bağımlılığı olmayan statik HTML/CSS/JS. `node scripts/build.mjs` ana sayfayı, proje ve hizmet sayfalarını, sitemap ve llms.txt dosyalarını üretir. Üretilen dosyalar depoda tutulur; Coolify mevcut static düzeniyle kökten yayınlar.
+- **Güncel tasarım (11.11.2026):** Kullanıcının yenileme talebiyle eski terminal/matrix teması kaldırıldı. Koyu yeşil, lime ve kırık beyaz; Space Grotesk başlıklar ve Manrope metin; büyük gerçek proje görselleri, erişilebilir menü ve hareket azaltma desteği.
+- **Bölümler:** Görsel proje vitrini, 6 seçili çalışma, 4 hizmet, yaklaşım/süreç, SSS ve e-posta iletişimi. Ayrı portföy sayfası ve 11 proje detay sayfası, 4 hizmet detay sayfası.
 
 ## Günlük
 
@@ -110,3 +110,19 @@ buradan tüm bağlamı edinebilmelidir. **Her görevden sonra güncellenmelidir.
 - [x] İletişim e-postası: `polyazilim@gmail.com` olarak güncellendi.
 - [x] `og:url`/`og:image`: canlı domain `https://polyazilim.com/` ile uyumlu.
 - [x] Coolify'da statik site deploy edildi; **site CANLI**.
+
+### 2026-11-11 — Portföy ve SEO/GEO yenilemesi
+
+- Başlangıç commit’i a4362fb1b33b3c6b7f2bbb9d1bcbbaf6aa474082; canlı uygulama e64kcc076ujw88698xgy2p32 (id 9), dal main, Coolify static.
+- Terminal ve matrix görünümü tamamen değiştirildi. Gerçek proje görselleri tarayıcı çerçeveleriyle sunuldu; büyük proje kartları, mobil menü, kategori filtreleri, süreç, hizmet ve SSS alanları eklendi.
+- 17 indekslenebilir sayfa: ana sayfa, proje listesi, 11 proje ve 4 hizmet sayfası. Ek 404.html noindex.
+- Her Telden portföye eklendi; kapak fotoğrafının gerçek ürün fotoğrafı olduğu belirtildi. Güvenlik ekranında örnek veri, Telegram görselinde temsili akış, Actor Studio ve AIBell görsellerinde arşiv niteliği açıklandı. Açılmayan Actor Studio yayına giden bağlantısı kaldırıldı; çalışma arşiv olarak korundu.
+- Artölyemiz kapsamı mevcut canlı siteye göre 3D baskı/figür/maket olarak düzeltildi. AIBell için doğrulanmamış AI işlevleri anlatılmadı. Satış artışı, müşteri sayısı, değerlendirme puanı veya başarı oranı uydurulmadı.
+- Organization, WebSite, WebPage, Service, CreativeWork, BreadcrumbList, CollectionPage/ItemList ve görünür içerikle aynı FAQPage verileri eklendi. Müşteri alan adlarını şirketin sameAs kimliği gibi gösteren eski işaretleme kaldırıldı.
+- Canonical, açıklamalar, sosyal paylaşım etiketleri, büyük görsel önizlemesi, sitemap ve llms.txt düzenlendi. Açık adres/telefon/konum uydurulmadı; mevcut e-posta, GA4 ve site doğrulama kimlikleri korundu.
+- Tasarım araştırması: https://www.awwwards.com/websites/portfolio/ (büyük proje sunumu ve tipografi). SEO/GEO: https://developers.google.com/search/docs/appearance/ai-features . Sıralama/AI görünürlük garantisi verilmez.
+- Kaynak üretimi scripts/build.mjs içinde. Düzenleme sonrası node scripts/build.mjs çalıştırılmalı; doğrudan üretilen sayfalardaki değişiklikler sonraki üretimde silinir.
+- Kontrol: 18 HTML sayfasında 302 iç bağlantı ve 15 farklı yerel görsel/stil/script bağlantısı; tek H1, dil, benzersiz kimlikler, canonical ve JSON-LD/SSS eşleşmesi başarılı. JS sözdizimi ve git diff kontrolü başarılı. CSS parser ortamda yok; tarayıcı önizleme host’u kullanılamıyor. Mobil/masaüstü görsel ve etkileşim doğrulaması tamamlanmadı.
+- Geri alma: Coolify’da a4362fb1b33b3c6b7f2bbb9d1bcbbaf6aa474082 commit’ini rollback=true ile dağıtmak. Mevcut imajın sunucuda varlığı doğrulandı; mevcut uygulama statik ve bağlı diski yok.
+- Yayın öncesi HTTP ve kaynak bağlantı kontrolleri tamamlanır; yayından sonra yeni sayfalar, statik dosyalar, JSON-LD ve çalışan commit kontrol edilir.
+- HTTP kontrolü: 17 sayfa ve 15 yerel varlık 200; başlık/açıklamalar benzersiz, JSON-LD geçerli, GA4/GSC kimlikleri başlangıçla aynı. Üretim deterministik. PHP önizlemesi bilinmeyen yolda ana sayfaya düşerek 200 verdi; bu geliştirme sunucusu davranışıdır. Gerçek 404 yanıtı üretimdeki nginx üzerinde kontrol edilecek; yerel 404 testi geçti sayılmadı.

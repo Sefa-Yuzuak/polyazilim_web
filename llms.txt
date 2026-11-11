@@ -1,0 +1,31 @@
+# Polyazılım
+
+> Web tasarım, özel yazılım, otomasyon, entegrasyon ve e-ticaret projeleri geliştiren yazılım ekibi.
+
+İletişim: polyazilim@gmail.com
+Web: https://polyazilim.com/
+
+## Hizmetler
+
+- [Web tasarım & geliştirme](https://polyazilim.com/hizmetler/web-tasarim/): Kurumsal web siteleri, hizmet sayfaları ve ürün vitrinleri. Görsel dili, içerik yapısını ve ziyaretçinin bir sonraki adımını birlikte tasarlıyoruz.
+- [Otomasyon & entegrasyon](https://polyazilim.com/hizmetler/otomasyon-entegrasyon/): Stok, içerik, bildirim ve platformlar arası veri akışlarını bir araya getiriyoruz. İşletmenizin çalışma biçimine uygun otomasyonlar geliştiriyoruz.
+- [Özel yazılım & paneller](https://polyazilim.com/hizmetler/ozel-yazilim-paneller/): Hazır araçların yetmediği noktada, operasyonunuzun ihtiyacına göre ekranlar ve iş akışları oluşturuyoruz. Yönetim, saha ve kullanıcı deneyimini birlikte düşünüyoruz.
+- [E-ticaret & dijital vitrin](https://polyazilim.com/hizmetler/eticaret-dijital-vitrin/): Ürün keşfi, mağaza, ödeme ve stok adımlarını aynı deneyimin parçaları olarak ele alıyoruz. İhtiyaca göre 3D sanal showroom çözümleri de geliştiriyoruz.
+
+## Projeler
+
+- [SCY Mobilya](https://polyazilim.com/projeler/scy-mobilya/): Ürünü keşfetmekten stok takibine, birbiriyle konuşan bir dijital deneyim.
+- [Alp in Alpes](https://polyazilim.com/projeler/alp-in-alpes/): Tasarım ürünlerini alışveriş deneyimine dönüştüren bir e-ticaret vitrini.
+- [Tunç Park · Güvenlik](https://polyazilim.com/projeler/tunc-park-guvenlik/): Sahadaki devriyeyi yönetim ekranına bağlayan bir operasyon sistemi.
+- [Her Telden Butik Pasta](https://polyazilim.com/projeler/her-telden-butik-pasta/): El işçiliğini görünür kılan, kutlamaları siparişe bağlayan bir marka sitesi.
+- [Alacan Hukuk](https://polyazilim.com/projeler/alacan-hukuk/): Mesleki kimliği ve uzmanlık alanlarını öne çıkaran bir dijital sunum.
+- [3D Artölyemiz](https://polyazilim.com/projeler/3d-artolyemiz/): Kişiye özel üretimin hikâyesini anlatan, görsel odaklı bir atölye vitrini.
+- [Tunç Park · Duyurular](https://polyazilim.com/projeler/tunc-park-portal/): Site yönetimi ile sakinler arasındaki bilgi akışını bir araya getiren portal.
+- [Misyon Hukuk](https://polyazilim.com/projeler/misyon-hukuk/): Kurumsal güveni, hizmet anlatımını ve iletişimi bir arada ele alan web sitesi.
+- [Actor Studio](https://polyazilim.com/projeler/actor-studio/): Tiyatro ve kurs operasyonlarını aynı çerçevede ele alan bir yönetim çalışması.
+- [AIBell](https://polyazilim.com/projeler/aibell/): Marka mesajını büyük görseller ve belirgin bir içerik düzeniyle anlatan arayüz.
+- [Telegram Otomasyonu](https://polyazilim.com/projeler/telegram-otomasyonu/): Bildirim ve komut akışlarını günlük iş süreçlerine bağlayan bot çalışmaları.
+
+## Kapsam
+
+Proje sayfaları geliştirme kapsamını anlatır. Arşiv veya temsili görseller sayfada belirtilir. Portföy projeleri Polyazılım'ın şirket kimliğiyle aynı varlık değildir. Açık adres, telefon, çalışma saatleri, başarı oranı veya müşteri puanı bu kaynakta doğrulanmamıştır. Süre ve fiyat proje kapsamına göre belirlenir. Arama sıralaması veya AI yanıtlarında görünürlük garantisi verilmez.
