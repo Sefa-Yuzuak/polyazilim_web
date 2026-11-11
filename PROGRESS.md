@@ -126,3 +126,14 @@ buradan tüm bağlamı edinebilmelidir. **Her görevden sonra güncellenmelidir.
 - Geri alma: Coolify’da a4362fb1b33b3c6b7f2bbb9d1bcbbaf6aa474082 commit’ini rollback=true ile dağıtmak. Mevcut imajın sunucuda varlığı doğrulandı; mevcut uygulama statik ve bağlı diski yok.
 - Yayın öncesi HTTP ve kaynak bağlantı kontrolleri tamamlanır; yayından sonra yeni sayfalar, statik dosyalar, JSON-LD ve çalışan commit kontrol edilir.
 - HTTP kontrolü: 17 sayfa ve 15 yerel varlık 200; başlık/açıklamalar benzersiz, JSON-LD geçerli, GA4/GSC kimlikleri başlangıçla aynı. Üretim deterministik. PHP önizlemesi bilinmeyen yolda ana sayfaya düşerek 200 verdi; bu geliştirme sunucusu davranışıdır. Gerçek 404 yanıtı üretimdeki nginx üzerinde kontrol edilecek; yerel 404 testi geçti sayılmadı.
+
+### 2026-11-11 — Yeni portföy CANLI
+
+- Kaynak commit: 33f19188c4ffb9f9c76ee71b3d31e81a92cde747, GitHub main dalına gönderildi.
+- Push sonrası otomatik dağıtım kaydı oluşmadığı görüldü. Mevcut Coolify uygulama dağıtım fonksiyonu kullanılarak aynı commit sıraya alındı; yeni kimlik bilgisi üretilmedi.
+- Dağıtım cc61bddf-0994-4833-a4c3-748beab24cad: finished. Bitiş 11.11.2026 19:46:45 (Europe/Istanbul).
+- Çalışan konteyner: e64kcc076ujw88698xgy2p32-20261111T164603. İmaj etiketi 33f19188c4ffb9f9c76ee71b3d31e81a92cde747, durum running.
+- Dış doğrulama: 17 sayfa, 15 statik varlık, sitemap.xml, robots.txt ve llms.txt başarılı. 17 benzersiz başlık, geçerli JSON-LD ve yeni ana sayfa metni doğrulandı.
+- Bilinmeyen üretim adresi gerçek 404 döndürdü. www.polyazilim.com 301 yönlendirmesi mevcut.
+- Canlı uygulama dışındaki sitelerin, proxy, ağ veya sunucu hizmetlerinin ayarları değiştirilmedi. Veri diski veya kullanıcı verisi taşıma gerekmedi.
+- Bu son kayıt belgelendirmedir; uygulama kodunu değiştirmez. Tarayıcı önizleme host’una erişilemediğinden görsel/mobil etkileşim QA sınırı devam ediyor. Arama motorlarının yeniden taraması ve SEO/GEO görünürlük sonucu ayrıca ölçülmedi.
