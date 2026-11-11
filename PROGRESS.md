@@ -145,3 +145,10 @@ buradan tüm bağlamı edinebilmelidir. **Her görevden sonra güncellenmelidir.
 - Güvenlik projesi ana sayfa, portföy ve ilgili hizmet alanlarında bağlantısız kart olarak korunuyor. Ayrıntı sayfası kaldırıldı; sitemap, ItemList ve llms.txt bağlantıları temizlendi.
 - Kontrol: 17 üretilen HTML dosyasında güvenlik projesine href/yapılandırılmış URL bulunmadı; sitemap/llms bağlantısı yok; üst üste hero sınıfları yok; üretim ve JavaScript sözdizimi başarılı.
 - Risk: ortak kart görsel oranı diğer proje kartlarını da etkiler. Geri alma: önceki çalışan 33f19188c4ffb9f9c76ee71b3d31e81a92cde747 imajını Coolify’da dağıtmak. Yayın sonrası yeni ana sayfa/CSS ve kaldırılan proje sayfasının 404 yanıtı kontrol edilecek. Tarayıcı önizleme erişim sınırı devam ediyor.
+
+### 2026-11-11 — Her Telden gerçek ekran görüntüsü
+- Kullanıcı portföy kartında ürün fotoğrafı yerine sitenin ekran görüntüsünü istedi.
+- Herkese açık canlı adresin gerçek ekran görüntüsü Thum.io URL screenshot API üzerinden alındı; 1200x750. Görsel açılıp menü, başlık, CTA ve ürün fotoğrafını birlikte içerdiği doğrulandı. Görsel AI ile üretilmedi veya yeniden tasarlanmadı.
+- assets/screenshots/her-telden-site.png eklendi; eski ürün fotoğrafı kaldırıldı. Ana sayfa, portföy ve proje detayındaki görsel/alt metin/ölçüler ve schema adresleri yeniden üretildi.
+- Ürün fotoğrafına özel detail-cake çerçevesi kaldırıldı. Proje notu gerçek site ekran görüntüsü ve çekim tarihini belirtiyor.
+- Risk yalnız görsel ve sunumuyla sınırlı; geri alma önceki d4d13564e2e94f710e0cd5e3ec7815a3bc0c8e36 imajını yeniden dağıtmak. Gerçek görsel ölçüsü, eski görsel referanslarının temizliği ve üretim sözdizimi doğrulandı; yayında yeni dosya ve HTML referansı kontrol edilir.
