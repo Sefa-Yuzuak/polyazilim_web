@@ -16,7 +16,7 @@ Web: https://polyazilim.com/
 
 - [SCY Mobilya](https://polyazilim.com/projeler/scy-mobilya/): Ürünü keşfetmekten stok takibine, birbiriyle konuşan bir dijital deneyim.
 - [Alp in Alpes](https://polyazilim.com/projeler/alp-in-alpes/): Tasarım ürünlerini alışveriş deneyimine dönüştüren bir e-ticaret vitrini.
-- [Tunç Park · Güvenlik](https://polyazilim.com/projeler/tunc-park-guvenlik/): Sahadaki devriyeyi yönetim ekranına bağlayan bir operasyon sistemi.
+- Tunç Park · Güvenlik: Sahadaki devriyeyi yönetim ekranına bağlayan bir operasyon sistemi.
 - [Her Telden Butik Pasta](https://polyazilim.com/projeler/her-telden-butik-pasta/): El işçiliğini görünür kılan, kutlamaları siparişe bağlayan bir marka sitesi.
 - [Alacan Hukuk](https://polyazilim.com/projeler/alacan-hukuk/): Mesleki kimliği ve uzmanlık alanlarını öne çıkaran bir dijital sunum.
 - [3D Artölyemiz](https://polyazilim.com/projeler/3d-artolyemiz/): Kişiye özel üretimin hikâyesini anlatan, görsel odaklı bir atölye vitrini.

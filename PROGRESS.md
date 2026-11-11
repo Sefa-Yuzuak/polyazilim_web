@@ -137,3 +137,11 @@ buradan tüm bağlamı edinebilmelidir. **Her görevden sonra güncellenmelidir.
 - Bilinmeyen üretim adresi gerçek 404 döndürdü. www.polyazilim.com 301 yönlendirmesi mevcut.
 - Canlı uygulama dışındaki sitelerin, proxy, ağ veya sunucu hizmetlerinin ayarları değiştirilmedi. Veri diski veya kullanıcı verisi taşıma gerekmedi.
 - Bu son kayıt belgelendirmedir; uygulama kodunu değiştirmez. Tarayıcı önizleme host’una erişilemediğinden görsel/mobil etkileşim QA sınırı devam ediyor. Arama motorlarının yeniden taraması ve SEO/GEO görünürlük sonucu ayrıca ölçülmedi.
+
+### 2026-11-11 — Görsel oranları ve güvenlik projesi bağlantıları
+- Kullanıcı ana sayfa görsellerinin ölçeksiz göründüğünü belirtti ve güvenlik projesine bağlantı verilmemesini istedi.
+- Eğik/üst üste hero ekranları kaldırıldı; tek düz SCY proje görseli kullanıldı. Kartların dış alanı 4:3, iç görsel alanı 8:5 ve object-fit:contain olarak düzenlendi; görsel esnetme/kırpma kaldırıldı. Dar ekranlarda aşırı iç boşluk oluşturan özel fotoğraf stilleri temizlendi.
+- Tüm görsellerin width/height değerleri gerçek dosya ölçülerine göre düzeltildi. CSS önbellek parametresi güncellendi.
+- Güvenlik projesi ana sayfa, portföy ve ilgili hizmet alanlarında bağlantısız kart olarak korunuyor. Ayrıntı sayfası kaldırıldı; sitemap, ItemList ve llms.txt bağlantıları temizlendi.
+- Kontrol: 17 üretilen HTML dosyasında güvenlik projesine href/yapılandırılmış URL bulunmadı; sitemap/llms bağlantısı yok; üst üste hero sınıfları yok; üretim ve JavaScript sözdizimi başarılı.
+- Risk: ortak kart görsel oranı diğer proje kartlarını da etkiler. Geri alma: önceki çalışan 33f19188c4ffb9f9c76ee71b3d31e81a92cde747 imajını Coolify’da dağıtmak. Yayın sonrası yeni ana sayfa/CSS ve kaldırılan proje sayfasının 404 yanıtı kontrol edilecek. Tarayıcı önizleme erişim sınırı devam ediyor.
