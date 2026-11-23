@@ -19,7 +19,7 @@ KOK = Path(__file__).resolve().parent.parent
 KAYNAK = KOK / "kaynak" / "ekran"
 CIKTI = KOK / "assets" / "img"
 OLCU = KOK / "scripts" / "gorsel-olcu.json"
-GENISLIKLER = (480, 800, 1200, 1600)
+GENISLIKLER = (480, 640, 800, 1200, 1600)
 
 
 def uret() -> None:

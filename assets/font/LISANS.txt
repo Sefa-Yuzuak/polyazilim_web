@@ -1,0 +1,4 @@
+Sora — SIL Open Font License 1.1
+Copyright 2019 The Sora Project Authors (https://github.com/sora-xor/sora-font)
+Lisans metni: https://openfontlicense.org
+Kaynak dosyalar Google Fonts (fonts.gstatic.com, v17) latin ve latin-ext alt kümeleri.
