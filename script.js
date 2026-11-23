@@ -1,4 +1,4 @@
-﻿(() => {
+(() => {
   'use strict';
   document.documentElement.classList.add('is-enhanced');
   const toggle = document.querySelector('.menu-toggle');
