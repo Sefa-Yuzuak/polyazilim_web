@@ -159,3 +159,9 @@ buradan tüm bağlamı edinebilmelidir. **Her görevden sonra güncellenmelidir.
 - Metinde yalnız ölçülmüş bilgi: 368 sayfa, Lighthouse 100/100/100 (23.11.2026). Eski siteyle karşılaştırma bilerek yazılmadı.
 - Ana sayfadaki sabit "01 — 11" sayacı proje sayısından üretilir oldu (artık 12).
 - Kontrol: yerelde 390 ve 1440 px, ana sayfa/proje listesi/proje sayfası: taşma 0, tek H1, kırık istek yok.
+
+### 2026-11-23 — Yeni görsel dil ve kurumsal logo
+- Kullanıcı isteği: tasarımı kumsalajans.com'a benzetmek, logoyu daha kurumsal yapmak. Kumsal'dan alınan yalnız tasarım dili: koyu lacivert zemin, ince ve büyük başlıklar (Sora), çok yuvarlak kartlar, hap düğmeler, ışık geçişleri, müşteri şeridi, ilkeler bölümü. Kumsal'ın metni, görseli, logosu ve pembe vurgu rengi KULLANILMADI; vurgu rengi mavi (#4f8cff).
+- Logo: çokgen kenarlı "P" + uçta bağlantı noktası, mavi geçişli kare; yazı "polyazılım", alt satır "YAZILIM · WEB · OTOMASYON". Dosyalar: assets/favicon.svg, assets/apple-touch-icon.png, assets/logo.png (şema logosu; logo.webp kaldırıldı).
+- Ana sayfa: kahramanda dönen kelime (yalnız CSS; ekran okuyucuya tam cümle, azaltılmış harekette sabit), "Birlikte çalıştığımız markalar" şeridi (portföydeki gerçek projelerden; Cansuyu öneri olduğu için hariç), "Neyi önemsiyoruz?" 4 ilke, SSS'e #sss bağlantısı, alt bilgide çalışmalar/hizmetler sütunları. Puan, müşteri sayısı, rozet uydurulmadı.
+- Kontrol: 320/375/390/768/1024/1440 px × 5 sayfa türü: yana taşma 0, kırık istek 0, JS hatası 0, tekrarlı id 0, tek H1; mobil menü açılıyor, Esc ile kapanıyor.
