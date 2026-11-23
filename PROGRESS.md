@@ -165,3 +165,11 @@ buradan tüm bağlamı edinebilmelidir. **Her görevden sonra güncellenmelidir.
 - Logo: çokgen kenarlı "P" + uçta bağlantı noktası, mavi geçişli kare; yazı "polyazılım", alt satır "YAZILIM · WEB · OTOMASYON". Dosyalar: assets/favicon.svg, assets/apple-touch-icon.png, assets/logo.png (şema logosu; logo.webp kaldırıldı).
 - Ana sayfa: kahramanda dönen kelime (yalnız CSS; ekran okuyucuya tam cümle, azaltılmış harekette sabit), "Birlikte çalıştığımız markalar" şeridi (portföydeki gerçek projelerden; Cansuyu öneri olduğu için hariç), "Neyi önemsiyoruz?" 4 ilke, SSS'e #sss bağlantısı, alt bilgide çalışmalar/hizmetler sütunları. Puan, müşteri sayısı, rozet uydurulmadı.
 - Kontrol: 320/375/390/768/1024/1440 px × 5 sayfa türü: yana taşma 0, kırık istek 0, JS hatası 0, tekrarlı id 0, tek H1; mobil menü açılıyor, Esc ile kapanıyor.
+
+### 2026-11-23 — Görsel hızı, önbellek ve kendi nginx ayarı
+- Şikâyet: görseller çok yavaş. Ölçülen sebepler: Her Telden kapağı 592 KB PNG; telefon 1568 px görseli indiriyordu; sunucu Cache-Control ve gzip göndermiyordu (Coolify static paketi, varsayılan nginx).
+- Kaynak ekran görüntüleri `kaynak/ekran/`e taşındı (yayına girmez). `python scripts/gorseller.py` → `assets/img/<ad>-<genişlik>.<özet>.{avif,webp}` (480/800/1200/1600) + `scripts/gorsel-olcu.json`. build.mjs `<picture>` + srcset/sizes üretir; sabit imageSizes kaldırıldı; og:image 1200 WebP sürümü.
+- CSS/JS sürümü artık içerik özetinden (`?v=<sha8>`), elle artırma yok.
+- Depoya Dockerfile + nginx/site.conf + nginx/guvenlik.conf: gzip, /assets/img ve CSS/JS 1 yıl immutable, diğer /assets 7 gün, HTML no-cache; nosniff, X-Frame-Options, Referrer-Policy, Permissions-Policy, HSTS, COOP; yalnız GET/HEAD; absolute_redirect off. CSP konmadı (GA4 satır içi betiği var).
+- Ölçüm (yerel, ana sayfa tam kaydırma): görsel yükü ~880 KB → telefon 157 KB, masaüstü 95 KB. 6 genişlik × 5 sayfa: taşma/kırık/JS hatası 0.
+- Coolify build_pack static → dockerfile. Geri alma: build_pack=static PATCH + önceki commit (daf50cb) deploy.

@@ -1,0 +1,136 @@
+{
+ "actorstudio.webp": {
+  "ad": "actorstudio",
+  "ozet": "53876b77",
+  "genislik": 1568,
+  "yukseklik": 731,
+  "surumler": [
+   480,
+   800,
+   1200,
+   1568
+  ]
+ },
+ "aibell.jpg": {
+  "ad": "aibell",
+  "ozet": "65bf4ed2",
+  "genislik": 1280,
+  "yukseklik": 610,
+  "surumler": [
+   480,
+   800,
+   1200,
+   1280
+  ]
+ },
+ "alacan.webp": {
+  "ad": "alacan",
+  "ozet": "8332589e",
+  "genislik": 1568,
+  "yukseklik": 718,
+  "surumler": [
+   480,
+   800,
+   1200,
+   1568
+  ]
+ },
+ "alpinalpes.webp": {
+  "ad": "alpinalpes",
+  "ozet": "0605845e",
+  "genislik": 800,
+  "yukseklik": 500,
+  "surumler": [
+   480,
+   800
+  ]
+ },
+ "artolyemiz.webp": {
+  "ad": "artolyemiz",
+  "ozet": "16d6ca7e",
+  "genislik": 1568,
+  "yukseklik": 740,
+  "surumler": [
+   480,
+   800,
+   1200,
+   1568
+  ]
+ },
+ "cansuyu.webp": {
+  "ad": "cansuyu",
+  "ozet": "30c00d26",
+  "genislik": 1200,
+  "yukseklik": 750,
+  "surumler": [
+   480,
+   800,
+   1200
+  ]
+ },
+ "guvenlik-takip.webp": {
+  "ad": "guvenlik-takip",
+  "ozet": "426b54a7",
+  "genislik": 800,
+  "yukseklik": 500,
+  "surumler": [
+   480,
+   800
+  ]
+ },
+ "her-telden-site.png": {
+  "ad": "her-telden-site",
+  "ozet": "93bc4657",
+  "genislik": 1200,
+  "yukseklik": 750,
+  "surumler": [
+   480,
+   800,
+   1200
+  ]
+ },
+ "misyonhukuk.webp": {
+  "ad": "misyonhukuk",
+  "ozet": "a1c17741",
+  "genislik": 1568,
+  "yukseklik": 744,
+  "surumler": [
+   480,
+   800,
+   1200,
+   1568
+  ]
+ },
+ "scy.webp": {
+  "ad": "scy",
+  "ozet": "05e63486",
+  "genislik": 1568,
+  "yukseklik": 723,
+  "surumler": [
+   480,
+   800,
+   1200,
+   1568
+  ]
+ },
+ "telegram-bot.png": {
+  "ad": "telegram-bot",
+  "ozet": "5c4185ea",
+  "genislik": 800,
+  "yukseklik": 500,
+  "surumler": [
+   480,
+   800
+  ]
+ },
+ "tuncpark.webp": {
+  "ad": "tuncpark",
+  "ozet": "a0c9708d",
+  "genislik": 800,
+  "yukseklik": 500,
+  "surumler": [
+   480,
+   800
+  ]
+ }
+}
