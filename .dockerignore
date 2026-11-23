@@ -2,7 +2,6 @@
 .gitattributes
 .dockerignore
 Dockerfile
-nginx
 scripts
 kaynak
 docs

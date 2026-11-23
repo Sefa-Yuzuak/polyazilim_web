@@ -5,3 +5,4 @@ RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx/site.conf /etc/nginx/conf.d/site.conf
 COPY nginx/guvenlik.conf /etc/nginx/guvenlik.conf
 COPY . /usr/share/nginx/html
+RUN rm -rf /usr/share/nginx/html/nginx
