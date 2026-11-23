@@ -152,3 +152,10 @@ buradan tüm bağlamı edinebilmelidir. **Her görevden sonra güncellenmelidir.
 - assets/screenshots/her-telden-site.png eklendi; eski ürün fotoğrafı kaldırıldı. Ana sayfa, portföy ve proje detayındaki görsel/alt metin/ölçüler ve schema adresleri yeniden üretildi.
 - Ürün fotoğrafına özel detail-cake çerçevesi kaldırıldı. Proje notu gerçek site ekran görüntüsü ve çekim tarihini belirtiyor.
 - Risk yalnız görsel ve sunumuyla sınırlı; geri alma önceki d4d13564e2e94f710e0cd5e3ec7815a3bc0c8e36 imajını yeniden dağıtmak. Gerçek görsel ölçüsü, eski görsel referanslarının temizliği ve üretim sözdizimi doğrulandı; yayında yeni dosya ve HTML referansı kontrol edilir.
+
+### 2026-11-23 — Cansuyu Derneği portföye eklendi
+- Proje kartı ve /projeler/cansuyu/ sayfası (scripts/build.mjs, Alp in Alpes'in ardına). Tür: "Kurumsal site yenileme önerisi"; sayfa notu, çalışmanın dernek için hazırlanmış bir öneri olduğunu ve resmî sitenin cansuyu.org.tr olduğunu açıkça yazıyor.
+- Görsel: https://cansuyu.polyazilim.com ana sayfasının 23.11.2026 gerçek ekran görüntüsü (puppeteer, duyuru penceresi kapalı), 1200x750 WebP.
+- Metinde yalnız ölçülmüş bilgi: 368 sayfa, Lighthouse 100/100/100 (23.11.2026). Eski siteyle karşılaştırma bilerek yazılmadı.
+- Ana sayfadaki sabit "01 — 11" sayacı proje sayısından üretilir oldu (artık 12).
+- Kontrol: yerelde 390 ve 1440 px, ana sayfa/proje listesi/proje sayfası: taşma 0, tek H1, kırık istek yok.
